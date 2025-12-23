@@ -93,13 +93,13 @@ def get_leak_cases(valve: ValveSpec) -> List[Tuple[str, float]]:
     full_area = valve.full_area
 
     cases = [
-        # (ケース名, リーク面積 [m²])
-        ("微小リーク (0.01%)", full_area * 0.0001),    # ヘアクラック程度
-        ("小リーク (0.1%)", full_area * 0.001),        # 軽度の弁座損傷
-        ("中リーク (0.5%)", full_area * 0.005),        # 中程度の弁座損傷
-        ("大リーク (1%)", full_area * 0.01),           # 重度の弁座損傷
-        ("重大リーク (2%)", full_area * 0.02),         # 弁座大破損
-        ("壊滅的リーク (5%)", full_area * 0.05),       # シート脱落等
+        # (Case name, Leak area [m²])
+        ("Micro (0.01%)", full_area * 0.0001),      # Hair crack
+        ("Small (0.1%)", full_area * 0.001),        # Minor seat damage
+        ("Medium (0.5%)", full_area * 0.005),       # Moderate seat damage
+        ("Large (1%)", full_area * 0.01),           # Severe seat damage
+        ("Critical (2%)", full_area * 0.02),        # Major seat failure
+        ("Catastrophic (5%)", full_area * 0.05),    # Seat detachment
     ]
 
     return cases
