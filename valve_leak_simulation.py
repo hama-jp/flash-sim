@@ -55,8 +55,8 @@ class WaterProperties:
 @dataclass
 class RoomGeometry:
     """室内形状"""
-    length: float = 15.0    # m
-    width: float = 15.0     # m
+    length: float = 10.0    # m
+    width: float = 10.0     # m
     height: float = 4.0     # m (仮定)
 
     @property
