@@ -3,7 +3,7 @@
 ゲート弁シートリーク影響シミュレーション
 
 目的: 単一弁隔離での開放作業リスクを定量評価
-条件: 600Aゲート弁、入口1.5MPa/190℃熱水、出口大気開放室内(15mx15m)
+条件: 600Aゲート弁、入口1.5MPa/190℃熱水、出口大気開放室内(10mx10m)
 """
 
 import numpy as np
@@ -348,7 +348,7 @@ def print_summary_table(assessments: List[RiskAssessment]):
 
     print("\n" + "=" * 100)
     print("シートリーク影響評価サマリー")
-    print("条件: 600Aゲート弁, 入口1.5MPa/190℃, 室内15m×15m×4m")
+    print("条件: 600Aゲート弁, 入口1.5MPa/190℃, 室内10m×10m×4m")
     print("=" * 100)
 
     # フラッシング率を表示
@@ -565,7 +565,7 @@ def create_evacuation_analysis(assessments: List[RiskAssessment]):
     reaction_time = 2.0      # 異常認識時間 [s]
     decision_time = 3.0      # 判断時間 [s]
     movement_speed = 1.0     # 移動速度 [m/s] (視界不良時)
-    max_escape_distance = 15 * np.sqrt(2)  # 対角線距離 [m]
+    max_escape_distance = 10 * np.sqrt(2)  # 対角線距離 [m]
 
     min_escape_time = reaction_time + decision_time + max_escape_distance / movement_speed
 

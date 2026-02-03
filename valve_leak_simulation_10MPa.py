@@ -2,7 +2,7 @@
 """
 Gate Valve Seat Leak Impact Simulation - 10 MPa Case
 
-Conditions: 600A gate valve, inlet 10MPa/190C hot water, outlet atmospheric (15mx15m room)
+Conditions: 600A gate valve, inlet 10MPa/190C hot water, outlet atmospheric (10mx10m room)
 Purpose: Quantify risk of single-valve isolation work
 """
 
@@ -276,7 +276,7 @@ def print_summary_table(assessments: List[RiskAssessment], pressure_mpa: float):
 
     print("\n" + "=" * 100)
     print(f"Seat Leak Impact Assessment Summary - {pressure_mpa} MPa Case")
-    print(f"Conditions: 600A Gate Valve, Inlet {pressure_mpa}MPa/190C, Room 15m x 15m x 4m")
+    print(f"Conditions: 600A Gate Valve, Inlet {pressure_mpa}MPa/190C, Room 10m x 10m x 4m")
     print("=" * 100)
 
     print(f"\nFlash evaporation rate: {assessments[0].flash_fraction * 100:.1f}%")
@@ -419,7 +419,7 @@ def create_evacuation_analysis(assessments: List[RiskAssessment]):
     reaction_time = 2.0
     decision_time = 3.0
     movement_speed = 1.0
-    max_escape_distance = 15 * np.sqrt(2)
+    max_escape_distance = 10 * np.sqrt(2)
 
     min_escape_time = reaction_time + decision_time + max_escape_distance / movement_speed
 
